@@ -83,17 +83,16 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 40px;
+  padding: 0;
   animation: float 5s ease-in-out infinite;
   border: 6px solid var(--white);
 }
-.floating-book .cover-inner {
-  font-family: var(--font-display);
-  color: var(--dusk-2);
+.floating-book img.cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
 }
-.floating-book .cover-inner .title-es { font-size: 1.7rem; margin-bottom: 6px; }
-.floating-book .cover-inner .title-en { font-size: 1rem; opacity: 0.6; font-style: italic; }
-.floating-book .cover-inner .glyph { font-size: 3rem; margin: 18px 0; }
 @keyframes float {
   0%, 100% { transform: translateY(0) rotate(-2deg); }
   50% { transform: translateY(-18px) rotate(2deg); }

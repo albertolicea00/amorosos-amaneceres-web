@@ -9,14 +9,30 @@
   align-items: center;
 }
 .about-visual {
-  background: linear-gradient(150deg, var(--dawn-1), var(--dawn-3));
-  border-radius: var(--radius-lg);
+  position: relative;
   min-height: 380px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--shadow-card);
-  font-size: 5rem;
+  overflow: hidden;
+}
+.about-book {
+  position: absolute;
+  top: 50%;
+  width: 44%;
+  max-width: 230px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 6px solid var(--white);
+  box-shadow: var(--shadow-soft);
+}
+.about-book-back {
+  left: 38%;
+  transform: translate(-50%, -50%) rotate(8deg);
+  z-index: 1;
+}
+.about-book-front {
+  left: 58%;
+  transform: translate(-50%, -50%) rotate(-6deg);
+  z-index: 2;
 }
 .about-text .stat-row {
   display: flex;
