@@ -82,6 +82,7 @@
 
 @media (max-width: 640px) {
   .story-footer-row { flex-direction: column; gap: 16px; }
+  .story-footer-row .goodnight { order: -1; }
 }
 
 .story-copyright {
