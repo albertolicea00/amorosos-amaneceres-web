@@ -66,7 +66,7 @@ export function initWheel(data) {
       } else {
         spinning = false;
         const story = stories[targetIndex];
-        resultEl.innerHTML = `${story.emoji} <strong>${story.title}</strong> — <a href="/read.html?story=${story.id}&lang=${data.lang}">${data.ui.wheel_go}</a>`;
+        resultEl.innerHTML = `${story.emoji} <strong>${story.title}</strong> — <a href="/stories/${data.lang}/story-${story.id}.html">${data.ui.wheel_go}</a>`;
         burstConfetti();
       }
     }
