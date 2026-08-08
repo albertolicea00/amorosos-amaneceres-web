@@ -45,6 +45,13 @@
   font-weight: 700;
   color: var(--dusk-1);
 }
+.story-header .story-value {
+  color: var(--dusk-1);
+  font-family: cursive;
+  font-weight: 200;
+  font-size: small;
+}
+
 .story-header h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin: 10px 0; }
 
 .story-psychology {
