@@ -9,8 +9,8 @@ export function renderStoryCards(data) {
     .map(
       (s) => `
     <div class="story-card">
+      <span class="value-ribbon-absolute">${s.value}</span>
       <div class="emoji">${s.emoji}</div>
-      <span class="value-tag">${s.value}</span>
       <h3>${s.title}</h3>
       <div class="card-links">
         <a href="/stories/${lang}/story-${s.id}.html">${data.ui.card_read}</a>

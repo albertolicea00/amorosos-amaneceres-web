@@ -8,6 +8,8 @@
   gap: 22px;
 }
 .story-card {
+  position: relative;
+  overflow: hidden;
   background: var(--white);
   border-radius: var(--radius-md);
   padding: 26px 22px;
@@ -23,13 +25,6 @@
 }
 .story-card .emoji { font-size: 2.2rem; }
 .story-card h3 { font-size: 1.15rem; margin-bottom: 2px; }
-.story-card .value-tag {
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--dusk-1);
-}
 .story-card .card-links {
   margin-top: auto;
   display: flex;
