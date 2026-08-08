@@ -24,7 +24,11 @@
   box-shadow: var(--shadow-soft);
 }
 .story-card .emoji { font-size: 2.2rem; }
-.story-card h3 { font-size: 1.15rem; margin-bottom: 2px; }
+.story-card h3 { 
+  font-size: 1.15rem; 
+  margin-bottom: 2px; 
+  color: var(--dusk-2);
+}
 .story-card .card-links {
   margin-top: auto;
   display: flex;
@@ -33,7 +37,7 @@
 .story-card .card-links a {
   font-size: 0.82rem;
   font-weight: 700;
-  color: var(--dusk-2);
+  color: var(--dusk-1);
 }
 
 @media (max-width: 980px) {
