@@ -1,5 +1,14 @@
+# Private source material (manuscript drafts, images, docs) — not part of the site
 .ignore/*
 
-# macOS
+# OS junk
 .DS_Store
+Thumbs.db
 
+# Editor junk
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
