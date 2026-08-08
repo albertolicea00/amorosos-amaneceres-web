@@ -21,17 +21,10 @@ export function renderStoryCards(data) {
     .join("");
 }
 
-export function renderFooterLists(esData, enData) {
-  const es = document.getElementById("footerStoriesEs");
-  const en = document.getElementById("footerStoriesEn");
-  if (es && esData) {
-    es.innerHTML = esData.stories
-      .map((s) => `<li><a href="/stories/es/story-${s.id}.html">${s.title}</a></li>`)
-      .join("");
-  }
-  if (en && enData) {
-    en.innerHTML = enData.stories
-      .map((s) => `<li><a href="/stories/en/story-${s.id}.html">${s.title}</a></li>`)
-      .join("");
-  }
+export function renderFooterList(data) {
+  const list = document.getElementById("footerStories");
+  if (!list) return;
+  list.innerHTML = data.stories
+    .map((s) => `<li><a href="/stories/${data.lang}/story-${s.id}.html">${s.title}</a></li>`)
+    .join("");
 }

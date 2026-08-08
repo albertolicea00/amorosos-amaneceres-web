@@ -7,7 +7,7 @@
 import { getPageLang, loadI18n } from "./modules/i18n.js";
 import { initNavbar } from "./modules/navbar.js";
 import { initReveal } from "./modules/reveal.js";
-import { renderStoryCards, renderFooterLists } from "./modules/storyCards.js";
+import { renderStoryCards, renderFooterList } from "./modules/storyCards.js";
 import { initWheel } from "./modules/wheel.js";
 import { initQuiz } from "./modules/quiz.js";
 import { initLangDropdowns } from "./modules/langDropdown.js";
@@ -18,11 +18,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   initLangDropdowns();
 
   const lang = getPageLang();
-  const otherLang = lang === "es" ? "en" : "es";
-  const [ownData, otherData] = await Promise.all([loadI18n(lang), loadI18n(otherLang)]);
+  const ownData = await loadI18n(lang);
 
   renderStoryCards(ownData);
-  renderFooterLists(lang === "es" ? ownData : otherData, lang === "en" ? ownData : otherData);
+  renderFooterList(ownData);
   initWheel(ownData);
   initQuiz(ownData);
 });
