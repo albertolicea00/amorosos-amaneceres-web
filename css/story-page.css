@@ -1,0 +1,88 @@
+/* ============================================================
+   Scope: story-page — individual story reading pages
+   (/stories/es|en/story-N.html).
+   ============================================================ */
+
+.story-page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 140px 24px 100px;
+}
+.story-topbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(255, 248, 239, 0.92);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(76, 33, 66, 0.08);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.back-link { font-weight: 700; color: var(--dusk-2); }
+.back-link:hover { color: var(--dawn-4); }
+.story-lang-switch { display: flex; gap: 8px; }
+.story-lang-switch a {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(138, 90, 168, 0.1);
+  color: var(--dusk-2);
+}
+.story-lang-switch a.active { background: var(--dawn-4); color: var(--white); }
+
+.story-header { text-align: center; margin-bottom: 44px; }
+.story-header .story-number {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--dusk-1);
+}
+.story-header h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin: 10px 0; }
+.story-header .story-tags {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.story-header .story-tags span {
+  background: rgba(244, 162, 89, 0.18);
+  color: var(--dusk-2);
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.story-psychology {
+  background: var(--cream-2);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius-sm);
+  padding: 18px 22px;
+  font-size: 0.92rem;
+  color: rgba(44, 27, 61, 0.85);
+  margin-bottom: 40px;
+}
+.story-content { font-family: var(--font-body); font-size: 1.12rem; }
+.story-content p { margin-bottom: 1.15em; }
+.story-footer {
+  margin-top: 60px;
+  text-align: center;
+  padding-top: 40px;
+  border-top: 1px dashed rgba(138, 90, 168, 0.25);
+}
+.story-footer .goodnight {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--dusk-2);
+  margin-bottom: 24px;
+}
+.story-footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
