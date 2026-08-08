@@ -1,0 +1,166 @@
+/* ============================================================
+   Scope: book3d — the /read.html 3D scroll-driven reading page.
+   Loaded only by read.html, on top of the shared style.css.
+   ============================================================ */
+
+html, body { height: 100%; }
+body.reader-body {
+  background: radial-gradient(120% 100% at 50% 0%, #2a1a3d 0%, #4a3170 45%, #8a5aa8 75%, #ff8c7a 100%);
+  overflow-x: hidden;
+}
+
+.reader-topbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(44, 27, 61, 0.35);
+  backdrop-filter: blur(8px);
+}
+.reader-topbar .back-link { color: var(--white); font-weight: 700; }
+.reader-topbar .story-lang-switch a {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--white);
+}
+.reader-topbar .story-lang-switch a.active { background: var(--gold); color: var(--ink); }
+
+.reader-scroll-track {
+  position: relative;
+  width: 100%;
+}
+
+.reader-viewport {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#webgl-container, #css3d-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+#webgl-container { z-index: 1; }
+#webgl-container canvas { display: block; }
+#css3d-container { z-index: 2; pointer-events: none; }
+
+.book-page-surface {
+  width: 520px;
+  height: 640px;
+  background: linear-gradient(155deg, #fffaf2, #fff1de);
+  border-radius: 6px;
+  box-shadow: 0 30px 70px rgba(20, 8, 30, 0.45);
+  padding: 46px 44px;
+  font-family: var(--font-body);
+  color: var(--ink);
+  overflow-y: auto;
+  pointer-events: auto;
+  box-sizing: border-box;
+}
+.book-page-surface::-webkit-scrollbar { width: 6px; }
+.book-page-surface::-webkit-scrollbar-thumb { background: rgba(138, 90, 168, 0.3); border-radius: 6px; }
+
+.book-page-surface .bp-eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dusk-1);
+}
+.book-page-surface h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  margin: 8px 0 4px;
+}
+.book-page-surface .bp-tags {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--dawn-4);
+  margin-bottom: 16px;
+}
+.book-page-surface .bp-psychology {
+  font-size: 0.82rem;
+  color: rgba(44, 27, 61, 0.7);
+  background: rgba(244, 162, 89, 0.15);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 18px;
+}
+.book-page-surface .bp-body p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin-bottom: 0.9em;
+}
+.book-page-surface.bp-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--dusk-1);
+}
+.book-page-surface.bp-cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(160deg, #fff8ef, #ffd89a);
+}
+.book-page-surface.bp-cover .bp-cover-glyph { font-size: 4rem; margin-bottom: 18px; }
+.book-page-surface.bp-cover h1 { font-family: var(--font-display); font-size: 2rem; margin-bottom: 8px; }
+.book-page-surface.bp-cover p { color: rgba(44, 27, 61, 0.7); }
+
+.reader-hint {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-align: center;
+  animation: bob 2s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes bob {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 8px); }
+}
+
+.reader-jump-row {
+  position: fixed;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+  display: flex;
+  gap: 8px;
+  background: rgba(44, 27, 61, 0.5);
+  backdrop-filter: blur(8px);
+  padding: 8px;
+  border-radius: 999px;
+}
+.reader-jump-row button {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.reader-jump-row button:hover { background: rgba(255, 255, 255, 0.3); transform: translateY(-2px); }
+.reader-jump-row button.active { background: var(--gold); }
+
+@media (max-width: 640px) {
+  .book-page-surface { width: 84vw; height: 74vh; padding: 30px 24px; }
+  .reader-jump-row { max-width: 92vw; overflow-x: auto; }
+}
