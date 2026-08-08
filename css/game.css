@@ -85,6 +85,12 @@
 }
 .quiz-result.active { display: block; }
 .quiz-result .glyph { font-size: 3.5rem; }
+.quiz-result .glyph img {
+  width: 260px;
+  height: 260px;
+  object-fit: contain;
+  margin: 0 auto;
+}
 .quiz-restart {
   background: none;
   border: none;

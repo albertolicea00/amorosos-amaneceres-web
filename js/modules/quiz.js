@@ -1,6 +1,7 @@
 // Scope: quiz — personality quiz that maps answers to a story.
 
 import { burstConfetti } from "./confetti.js";
+import { characterImg } from "./animalSlug.js";
 
 function showQuizStep(i) {
   document.querySelectorAll(".quiz-step").forEach((el) => {
@@ -23,7 +24,7 @@ function finishQuiz(data, scores) {
   document.getElementById("quizProgress").style.display = "none";
   const resultEl = document.getElementById("quizResult");
   resultEl.classList.add("active");
-  document.getElementById("quizGlyph").textContent = story.emoji;
+  document.getElementById("quizGlyph").innerHTML = characterImg(story.id, story.emoji);
   document.getElementById("quizAnimal").textContent = story.title;
   document.getElementById("quizDesc").textContent = data.ui.quiz_desc_template
     .replace("{animal}", story.animal.toLowerCase())

@@ -1,11 +1,17 @@
 // Scope: wheel — canvas "ruleta de la suerte" that spins to a story.
+// Result card mirrors the quiz result: character image, title,
+// description, a "read my story" link, and a restart button that
+// re-shows the wheel instead of the result.
 
 import { burstConfetti } from "./confetti.js";
+import { characterImg } from "./animalSlug.js";
 
 export function initWheel(data) {
   const canvas = document.getElementById("wheel-canvas");
   const spinBtn = document.getElementById("spinBtn");
-  const resultEl = document.getElementById("wheel-result");
+  const wheelWrap = document.getElementById("wheel-wrap");
+  const introEl = document.getElementById("wheelIntro");
+  const resultEl = document.getElementById("wheelResult");
   if (!canvas || !spinBtn) return;
 
   const stories = data.stories;
@@ -42,10 +48,32 @@ export function initWheel(data) {
     ctx.restore();
   }
 
+  function showResult(story) {
+    if (wheelWrap) wheelWrap.style.display = "none";
+    spinBtn.style.display = "none";
+    if (introEl) introEl.style.display = "none";
+    resultEl.classList.add("active");
+    document.getElementById("wheelGlyph").innerHTML = characterImg(story.id, story.emoji);
+    document.getElementById("wheelAnimal").textContent = story.title;
+    document.getElementById("wheelDesc").textContent = data.ui.quiz_desc_template
+      .replace("{animal}", story.animal.toLowerCase())
+      .replace("{value}", story.value);
+    const link = document.getElementById("wheelStoryLink");
+    link.href = `/stories/${data.lang}/story-${story.id}.html`;
+    link.textContent = data.ui.quiz_cta;
+    burstConfetti();
+  }
+
+  function resetWheel() {
+    resultEl.classList.remove("active");
+    if (wheelWrap) wheelWrap.style.display = "";
+    spinBtn.style.display = "";
+    if (introEl) introEl.style.display = "";
+  }
+
   function spin() {
     if (spinning) return;
     spinning = true;
-    resultEl.textContent = "";
     const targetIndex = Math.floor(Math.random() * stories.length);
     const targetSlice = targetIndex * slice + slice / 2;
     const extraTurns = 6 * Math.PI * 2;
@@ -65,13 +93,14 @@ export function initWheel(data) {
         requestAnimationFrame(animate);
       } else {
         spinning = false;
-        const story = stories[targetIndex];
-        resultEl.innerHTML = `${story.emoji} <strong>${story.title}</strong> — <a href="/stories/${data.lang}/story-${story.id}.html">${data.ui.wheel_go}</a>`;
-        burstConfetti();
+        showResult(stories[targetIndex]);
       }
     }
     requestAnimationFrame(animate);
   }
+
+  const restartBtn = document.getElementById("wheelRestart");
+  if (restartBtn) restartBtn.addEventListener("click", resetWheel);
 
   drawWheel();
   spinBtn.addEventListener("click", spin);

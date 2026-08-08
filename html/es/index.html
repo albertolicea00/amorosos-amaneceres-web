@@ -138,15 +138,27 @@
         <div class="game-grid">
           <div class="game-card" data-reveal>
             <h3>Ruleta de la suerte</h3>
-            <p>Gira y descubre qué cuento leerás esta noche.</p>
+            <p id="wheelIntro">Gira y descubre qué cuento leerás esta noche.</p>
             <div id="wheel-wrap">
               <div class="wheel-pointer"></div>
               <canvas id="wheel-canvas" width="280" height="280"></canvas>
             </div>
-            <p id="wheel-result"></p>
             <button class="btn btn-primary" id="spinBtn">
               Girar la ruleta
             </button>
+
+            <div class="quiz-result" id="wheelResult">
+              <div class="glyph" id="wheelGlyph"></div>
+              <h3 id="wheelAnimal"></h3>
+              <p id="wheelDesc"></p>
+              <a href="#" class="btn btn-primary" id="wheelStoryLink"
+                >Leer mi cuento</a
+              >
+              <br />
+              <button class="quiz-restart" id="wheelRestart">
+                Volver a intentar
+              </button>
+            </div>
           </div>
 
           <div class="game-card quiz-box" data-reveal>

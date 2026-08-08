@@ -140,13 +140,25 @@
         <div class="game-grid">
           <div class="game-card" data-reveal>
             <h3>Wheel of fortune</h3>
-            <p>Spin to discover which story you'll read tonight.</p>
+            <p id="wheelIntro">Spin to discover which story you'll read tonight.</p>
             <div id="wheel-wrap">
               <div class="wheel-pointer"></div>
               <canvas id="wheel-canvas" width="280" height="280"></canvas>
             </div>
-            <p id="wheel-result"></p>
             <button class="btn btn-primary" id="spinBtn">Spin the wheel</button>
+
+            <div class="quiz-result" id="wheelResult">
+              <div class="glyph" id="wheelGlyph"></div>
+              <h3 id="wheelAnimal"></h3>
+              <p id="wheelDesc"></p>
+              <a href="#" class="btn btn-primary" id="wheelStoryLink"
+                >Read my story</a
+              >
+              <br />
+              <button class="quiz-restart" id="wheelRestart">
+                Try again
+              </button>
+            </div>
           </div>
 
           <div class="game-card quiz-box" data-reveal>
