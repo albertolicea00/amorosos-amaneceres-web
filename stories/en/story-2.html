@@ -23,35 +23,39 @@
   </head>
   <body>
     <div class="story-topbar">
-      <a href="/en/index.html" class="back-link">← Home</a>
-      <div class="lang-dropdown">
-        <button
-          type="button"
-          class="lang-dropdown-toggle"
-          aria-haspopup="true"
-          aria-expanded="false"
+      <a href="/en/index.html#stories" class="back-link">← All stories</a>
+      <div class="story-topbar-actions">
+        <a href="/read.html?story=2&lang=en" class="btn btn-primary btn-small"
+          >View in 3D</a
         >
-          <span class="lang-current">EN</span><span class="lang-caret">▾</span>
-        </button>
-        <ul class="lang-dropdown-menu">
-          <li><a href="/stories/es/story-2.html" lang="es">Español</a></li>
-          <li>
-            <a href="/stories/en/story-2.html" class="active" lang="en"
-              >English</a
-            >
-          </li>
-        </ul>
+        <div class="lang-dropdown">
+          <button
+            type="button"
+            class="lang-dropdown-toggle"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <span class="lang-current">EN</span
+            ><span class="lang-caret">▾</span>
+          </button>
+          <ul class="lang-dropdown-menu">
+            <li><a href="/stories/es/story-2.html" lang="es">Español</a></li>
+            <li>
+              <a href="/stories/en/story-2.html" class="active" lang="en"
+                >English</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
     <main class="story-page">
       <header class="story-header">
+        <span class="value-ribbon-fixed">Discipline</span>
         <p class="story-number">Story 2 of 8</p>
+        <p class="story-animal-label">🦆 White Duck</p>
         <h1>The Bridge of the Three Little Ducklings</h1>
-        <div class="story-tags">
-          <span>🦆 Animal: White Duck</span>
-          <span>💛 Value: Discipline</span>
-        </div>
       </header>
 
       <p class="story-psychology">
@@ -219,22 +223,19 @@
       </article>
 
       <footer class="story-footer">
-        <p class="goodnight">Good night!<br />Sweet dreams!</p>
-        <a href="/read.html?story=2&amp;lang=en" class="btn btn-primary"
-          >View this story in 3D →</a
-        >
-        <div class="story-footer-nav">
-          <a href="/stories/en/story-1.html" class="btn btn-secondary btn-small"
-            >← Previous story</a
-          >
-          <a href="/en/index.html#stories" class="btn btn-secondary btn-small"
-            >All stories</a
-          >
-          <a href="/stories/en/story-3.html" class="btn btn-secondary btn-small"
-            >Next story →</a
-          >
+        <div class="story-footer-row">
+          <a href="/stories/en/story-1.html" class="previous-story">← Previous story</a>
+          <p class="goodnight">Good night!<br>Sweet dreams!</p>
+          <a href="/stories/en/story-3.html" class="next-story">Next story →</a>
         </div>
       </footer>
     </main>
+
+    <footer class="story-copyright">
+      <p>
+        © 2026 Amorosos Amaneceres · Ania Vallejo Placeres · Todos los derechos
+        reservados.
+      </p>
+    </footer>
   </body>
 </html>

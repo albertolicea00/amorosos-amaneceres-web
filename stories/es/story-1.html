@@ -21,35 +21,39 @@
   </head>
   <body>
     <div class="story-topbar">
-      <a href="/index.html" class="back-link">← Inicio</a>
-      <div class="lang-dropdown">
-        <button
-          type="button"
-          class="lang-dropdown-toggle"
-          aria-haspopup="true"
-          aria-expanded="false"
+      <a href="/index.html#stories" class="back-link">← Todos los cuentos</a>
+      <div class="story-topbar-actions">
+        <a href="/read.html?story=1&lang=es" class="btn btn-primary btn-small"
+          >Ver en 3D</a
         >
-          <span class="lang-current">ES</span><span class="lang-caret">▾</span>
-        </button>
-        <ul class="lang-dropdown-menu">
-          <li>
-            <a href="/stories/es/story-1.html" class="active" lang="es"
-              >Español</a
-            >
-          </li>
-          <li><a href="/stories/en/story-1.html" lang="en">English</a></li>
-        </ul>
+        <div class="lang-dropdown">
+          <button
+            type="button"
+            class="lang-dropdown-toggle"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <span class="lang-current">ES</span
+            ><span class="lang-caret">▾</span>
+          </button>
+          <ul class="lang-dropdown-menu">
+            <li>
+              <a href="/stories/es/story-1.html" class="active" lang="es"
+                >Español</a
+              >
+            </li>
+            <li><a href="/stories/en/story-1.html" lang="en">English</a></li>
+          </ul>
+        </div>
       </div>
     </div>
 
     <main class="story-page">
       <header class="story-header">
+        <span class="value-ribbon-fixed">Fe</span>
         <p class="story-number">Cuento 1 de 8</p>
+        <p class="story-animal-label">🐜 Hormiga</p>
         <h1>La Hormiguita que Buscaba Familia</h1>
-        <div class="story-tags">
-          <span>🐜 Animal: Hormiga</span>
-          <span>💛 Valor: Fe</span>
-        </div>
       </header>
 
       <p class="story-psychology">
@@ -165,19 +169,18 @@
       </article>
 
       <footer class="story-footer">
-        <p class="goodnight">¡Hasta mañana!<br />¡Que tengas dulces sueños!</p>
-        <a href="/read.html?story=1&amp;lang=es" class="btn btn-primary"
-          >Ver este cuento en 3D →</a
-        >
-        <div class="story-footer-nav">
-          <a href="/index.html#stories" class="btn btn-secondary btn-small"
-            >Todos los cuentos</a
-          >
-          <a href="/stories/es/story-2.html" class="btn btn-secondary btn-small"
-            >Siguiente cuento →</a
-          >
+        <div class="story-footer-row">
+          <p class="goodnight">¡Hasta mañana!<br>¡Que tengas dulces sueños!</p>
+          <a href="/stories/es/story-2.html" class="btn btn-secondary btn-small">Siguiente cuento →</a>
         </div>
       </footer>
     </main>
+
+    <footer class="story-copyright">
+      <p>
+        © 2026 Amorosos Amaneceres · Ania Vallejo Placeres · Todos los derechos
+        reservados.
+      </p>
+    </footer>
   </body>
 </html>
