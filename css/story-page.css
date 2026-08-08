@@ -45,18 +45,14 @@
   font-weight: 700;
   color: var(--dusk-1);
 }
-.story-header .story-animal-label {
-  font-weight: 700;
-  font-size: 0.95rem;
-  color: var(--dawn-4);
-  margin: 8px 0 2px;
-}
 .story-header h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin: 10px 0; }
 
 .story-psychology {
-  background: var(--cream-2);
-  border-left: 4px solid var(--gold);
-  border-radius: var(--radius-sm);
+  font-family: cursive;
+  text-align: center;
+  /* background: var(--cream-2); */
+  /* border-left: 4px solid var(--gold); */
+  /* border-radius: var(--radius-sm); */
   padding: 18px 22px;
   font-size: 0.92rem;
   color: rgba(44, 27, 61, 0.85);
