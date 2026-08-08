@@ -1,5 +1,7 @@
 // Scope: wheel — canvas "ruleta de la suerte" that spins to a story.
 
+import { burstConfetti } from "./confetti.js";
+
 export function initWheel(data) {
   const canvas = document.getElementById("wheel-canvas");
   const spinBtn = document.getElementById("spinBtn");
@@ -65,6 +67,7 @@ export function initWheel(data) {
         spinning = false;
         const story = stories[targetIndex];
         resultEl.innerHTML = `${story.emoji} <strong>${story.title}</strong> — <a href="/read.html?story=${story.id}&lang=${data.lang}">${data.ui.wheel_go}</a>`;
+        burstConfetti();
       }
     }
     requestAnimationFrame(animate);

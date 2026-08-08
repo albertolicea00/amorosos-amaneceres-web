@@ -1,5 +1,7 @@
 // Scope: quiz — personality quiz that maps answers to a story.
 
+import { burstConfetti } from "./confetti.js";
+
 function showQuizStep(i) {
   document.querySelectorAll(".quiz-step").forEach((el) => {
     el.classList.toggle("active", Number(el.dataset.step) === i);
@@ -29,6 +31,8 @@ function finishQuiz(data, scores) {
   const link = document.getElementById("quizStoryLink");
   link.href = `/stories/${data.lang}/story-${story.id}.html`;
   link.textContent = data.ui.quiz_cta;
+
+  burstConfetti();
 }
 
 function renderQuiz(data) {
