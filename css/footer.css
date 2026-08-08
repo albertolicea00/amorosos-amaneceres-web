@@ -1,0 +1,42 @@
+/* ============================================================
+   Scope: footer — site-wide footer, support links.
+   ============================================================ */
+
+footer.site-footer {
+  background: var(--ink);
+  color: rgba(255, 255, 255, 0.75);
+  padding: 70px 0 30px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+.footer-grid h4 { color: var(--white); font-size: 0.95rem; }
+.footer-grid ul { list-style: none; padding: 0; margin: 0; }
+.footer-grid li { margin-bottom: 10px; font-size: 0.9rem; }
+.footer-grid a:hover { color: var(--gold-soft); }
+.support-links { display: flex; gap: 10px; flex-wrap: wrap; }
+.support-links a {
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+.support-links a:hover { background: rgba(255, 255, 255, 0.16); }
+.footer-bottom {
+  margin-top: 50px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 980px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .footer-grid { grid-template-columns: 1fr; }
+}

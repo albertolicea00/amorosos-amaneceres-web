@@ -1,0 +1,19 @@
+/* ============================================================
+   Amorosos Amaneceres — stylesheet entry point.
+   Split by scope: each @import is one component/section.
+   Referenced by every page as a single <link>; edit the scoped
+   file, not this one.
+   ============================================================ */
+
+@import url("tokens.css");
+@import url("sections.css");
+@import url("navbar.css");
+@import url("lang-dropdown.css");
+@import url("hero.css");
+@import url("about.css");
+@import url("stories-grid.css");
+@import url("game.css");
+@import url("cta-band.css");
+@import url("footer.css");
+@import url("reveal.css");
+@import url("story-page.css");

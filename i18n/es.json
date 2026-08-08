@@ -1,0 +1,69 @@
+{
+  "lang": "es",
+  "ui": {
+    "card_read": "Leer",
+    "card_3d": "Ver en 3D",
+    "wheel_go": "Ir al cuento →",
+    "quiz_cta": "Leer mi cuento",
+    "quiz_desc_template": "Tu animalito es {animal}. Valor a cultivar: {value}."
+  },
+  "stories": [
+    { "id": 1, "emoji": "🐜", "animal": "Hormiga",          "value": "Fe",          "title": "La Hormiguita que Buscaba Familia" },
+    { "id": 2, "emoji": "🦆", "animal": "Pato blanco",      "value": "Disciplina",  "title": "El Puente de los Tres Patitos" },
+    { "id": 3, "emoji": "🦁", "animal": "Leona",            "value": "Unidad",      "title": "La Leoncita y el Grillo Cantor" },
+    { "id": 4, "emoji": "🐢", "animal": "Tortuga",          "value": "Solidaridad", "title": "Cuosuelij, la Tortuga Perezosa" },
+    { "id": 5, "emoji": "🐇", "animal": "Conejo",           "value": "Paciencia",   "title": "El Conejo que Dejó de Saltar" },
+    { "id": 6, "emoji": "🦋", "animal": "Oruga y Mariposa", "value": "Respeto",     "title": "La Oruga que Soñó con Volar" },
+    { "id": 7, "emoji": "🐝", "animal": "Abeja",            "value": "Amor",        "title": "La Abeja Enamorada del Tomeguín" },
+    { "id": 8, "emoji": "🐑", "animal": "Oveja",            "value": "Familia",     "title": "La Ovejita y los Lobos de la Luna" }
+  ],
+  "quiz": {
+    "questions": [
+      {
+        "q": "Cuando tienes un problema grande, ¿qué haces primero?",
+        "options": [
+          { "text": "Busco ayuda y confío en que todo saldrá bien", "score": { "1": 2, "7": 1 } },
+          { "text": "Sigo las reglas que me han enseñado", "score": { "2": 2 } },
+          { "text": "Reúno a mi grupo y lo resolvemos juntos", "score": { "3": 2, "4": 1 } },
+          { "text": "Espero, con calma, el momento correcto", "score": { "5": 2 } }
+        ]
+      },
+      {
+        "q": "Tus amigos dirían que eres...",
+        "options": [
+          { "text": "Trabajador y muy fuerte para tu tamaño", "score": { "1": 2 } },
+          { "text": "Ordenado y responsable", "score": { "2": 2 } },
+          { "text": "Leal, aunque a veces travieso", "score": { "3": 2 } },
+          { "text": "Tranquilo y paciente", "score": { "5": 2, "8": 1 } }
+        ]
+      },
+      {
+        "q": "¿Qué valoras más en tu familia?",
+        "options": [
+          { "text": "Que siempre me acepten, sea como sea", "score": { "1": 2 } },
+          { "text": "Que confiemos unos en otros", "score": { "2": 2, "8": 1 } },
+          { "text": "Que estemos unidos pase lo que pase", "score": { "3": 2, "8": 1 } },
+          { "text": "Que nos cuidemos como equipo", "score": { "4": 2 } }
+        ]
+      },
+      {
+        "q": "Una tarea pesada te toca a ti. ¿Cómo reaccionas?",
+        "options": [
+          { "text": "La cargo sin quejarme, aunque pese mucho", "score": { "1": 2 } },
+          { "text": "La comparto con quien esté cerca", "score": { "4": 2, "6": 1 } },
+          { "text": "Canto o disfruto mientras la hago", "score": { "7": 2 } },
+          { "text": "La hago despacio, a mi propio ritmo", "score": { "5": 2 } }
+        ]
+      },
+      {
+        "q": "¿Qué te gustaría que la gente respetara de ti?",
+        "options": [
+          { "text": "Mi proceso de cambiar y crecer", "score": { "6": 2 } },
+          { "text": "Mi espacio y mis decisiones", "score": { "6": 2, "3": 1 } },
+          { "text": "Mi forma tranquila de ser", "score": { "8": 2 } },
+          { "text": "Mi manera de amar sin condiciones", "score": { "7": 2 } }
+        ]
+      }
+    ]
+  }
+}

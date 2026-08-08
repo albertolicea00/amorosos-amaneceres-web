@@ -1,0 +1,20 @@
+/* ============================================================
+   Scope: cta-band — the dusk-toned "buy the book" band.
+   ============================================================ */
+
+.cta-band {
+  background: linear-gradient(120deg, var(--dusk-2), var(--dusk-1));
+  border-radius: var(--radius-lg);
+  padding: 60px;
+  color: var(--white);
+  text-align: center;
+  margin: 0 24px;
+  box-shadow: var(--shadow-soft);
+}
+.cta-band h2 { color: var(--white); }
+.cta-band p { color: rgba(255, 255, 255, 0.85); max-width: 60ch; margin-inline: auto; }
+.cta-band .hero-cta { justify-content: center; }
+
+@media (max-width: 640px) {
+  .cta-band { padding: 40px 24px; margin: 0 12px; }
+}

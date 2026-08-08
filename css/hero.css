@@ -1,0 +1,106 @@
+/* ============================================================
+   Scope: hero — landing header, sunrise backdrop, floating book.
+   ============================================================ */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 110px;
+  overflow: hidden;
+  background: radial-gradient(120% 100% at 15% 10%, var(--dawn-1) 0%, var(--dawn-2) 32%, var(--dawn-3) 58%, var(--dawn-4) 78%, var(--dusk-1) 100%);
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 85%, rgba(255, 255, 255, 0.35), transparent 55%);
+  pointer-events: none;
+}
+.hero-sun {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff6da 0%, var(--gold-soft) 45%, transparent 70%);
+  top: -120px;
+  right: -80px;
+  filter: blur(2px);
+  animation: pulse-sun 6s ease-in-out infinite;
+}
+@keyframes pulse-sun {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.06); opacity: 1; }
+}
+.hero .container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+.hero-copy h1 {
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  color: var(--white);
+  text-shadow: 0 8px 30px rgba(74, 24, 58, 0.25);
+}
+.hero-copy .lede {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.2rem;
+  max-width: 46ch;
+}
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 8px;
+}
+.hero-badges {
+  display: flex;
+  gap: 22px;
+  margin-top: 34px;
+  color: var(--white);
+  font-size: 0.85rem;
+  font-weight: 700;
+  flex-wrap: wrap;
+}
+.hero-badges span { opacity: 0.9; }
+
+.hero-book {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.floating-book {
+  width: min(360px, 80vw);
+  aspect-ratio: 3 / 4;
+  background: linear-gradient(160deg, var(--white), var(--cream-2));
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  animation: float 5s ease-in-out infinite;
+  border: 6px solid var(--white);
+}
+.floating-book .cover-inner {
+  font-family: var(--font-display);
+  color: var(--dusk-2);
+}
+.floating-book .cover-inner .title-es { font-size: 1.7rem; margin-bottom: 6px; }
+.floating-book .cover-inner .title-en { font-size: 1rem; opacity: 0.6; font-style: italic; }
+.floating-book .cover-inner .glyph { font-size: 3rem; margin: 18px 0; }
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-18px) rotate(2deg); }
+}
+
+@media (max-width: 980px) {
+  .hero .container { grid-template-columns: 1fr; text-align: center; }
+  .hero-copy .lede { margin-inline: auto; }
+  .hero-badges, .hero-cta { justify-content: center; }
+}

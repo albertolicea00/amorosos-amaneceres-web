@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amorosos Amaneceres — Children's Stories with Values</title>
+    <meta
+      name="description"
+      content="Amorosos Amaneceres: children's stories about animals that teach human values. Read online in 3D, download, or buy on Amazon."
+    />
+    <link rel="canonical" href="/en/index.html" />
+    <link rel="alternate" hreflang="es" href="/index.html" />
+    <link rel="alternate" hreflang="en" href="/en/index.html" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌅</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Quicksand:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="container">
+        <a href="/en/index.html" class="logo"
+          >Amorosos <span>Amaneceres</span></a
+        >
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#stories">Stories</a></li>
+          <li><a href="#play">Play</a></li>
+          <li><a href="#buy">Buy</a></li>
+          <li><a href="/read.html?lang=en">Read online</a></li>
+          <li class="lang-dropdown">
+            <button
+              type="button"
+              class="lang-dropdown-toggle"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <span class="lang-current">EN</span
+              ><span class="lang-caret">▾</span>
+            </button>
+            <ul class="lang-dropdown-menu">
+              <li><a href="/index.html" lang="es">Español</a></li>
+              <li>
+                <a href="/en/index.html" class="active" lang="en">English</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-sun"></div>
+      <div class="container">
+        <div class="hero-copy">
+          <h1>Amorosos Amaneceres</h1>
+          <p class="lede">
+            Eight little animals, eight human values, and a different sunrise
+            every night. Stories to read aloud, to dream about, and to grow with
+            as a family.
+          </p>
+          <div class="hero-cta">
+            <a href="/read.html?lang=en" class="btn btn-primary"
+              >Read online in 3D</a
+            >
+            <a href="#buy" class="btn btn-secondary">Buy on Amazon</a>
+          </div>
+          <div class="hero-badges">
+            <span>📖 8 original stories</span>
+            <span>💛 8 human values</span>
+          </div>
+        </div>
+        <div class="hero-book">
+          <div class="floating-book">
+            <div class="cover-inner">
+              <div class="title-es">Amorosos Amaneceres</div>
+              <div class="glyph">🌅🐢🐝🐑</div>
+              <div class="title-en">Amorosos Amaneceres</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="ad-slot">
+      <div class="ad-inner" id="ad-slot-top">Ad Slot — AdSense</div>
+    </div>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div class="about-visual" data-reveal>🌄</div>
+        <div class="about-text" data-reveal>
+          <span class="eyebrow">About the book</span>
+          <h2>One sunrise, one lesson, one little animal</h2>
+          <p>
+            Each story follows an animal with its own psychology and a human
+            value to nurture: faith, discipline, unity, solidarity, patience,
+            respect, love, and family. Written to be read before bed, every
+            story closes with the same wish: sweet dreams.
+          </p>
+          <p>
+            Created by Ania Vallejo Placeres, meant to awaken the inner child we
+            all carry.
+          </p>
+          <div class="stat-row">
+            <div class="stat">8<small>stories</small></div>
+            <div class="stat">2<small>languages</small></div>
+            <div class="stat">1<small>book</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stories" class="section-alt">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">The eight stories</span>
+          <h2>Pick a little animal and its story</h2>
+          <p>
+            Each card opens the story in traditional reading or the 3D
+            experience.
+          </p>
+        </div>
+        <div class="stories-grid" id="storiesGrid" data-reveal>
+          <!-- cards injected by main.js from /i18n/en.json -->
+        </div>
+      </div>
+    </section>
+
+    <div class="ad-slot">
+      <div class="ad-inner" id="ad-slot-mid">Ad Slot — AdSense</div>
+    </div>
+
+    <section id="play">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Play and discover</span>
+          <h2>Which story is yours?</h2>
+          <p>
+            Spin the wheel or take the personality quiz to discover your little
+            animal.
+          </p>
+        </div>
+        <div class="game-grid">
+          <div class="game-card" data-reveal>
+            <h3>Wheel of fortune</h3>
+            <p>Spin to discover which story you'll read tonight.</p>
+            <div id="wheel-wrap">
+              <div class="wheel-pointer"></div>
+              <canvas id="wheel-canvas" width="280" height="280"></canvas>
+            </div>
+            <p id="wheel-result"></p>
+            <button class="btn btn-primary" id="spinBtn">Spin the wheel</button>
+          </div>
+
+          <div class="game-card quiz-box" data-reveal>
+            <h3>Personality quiz</h3>
+            <div class="quiz-progress" id="quizProgress"></div>
+            <div id="quizSteps"></div>
+            <div class="quiz-result" id="quizResult">
+              <div class="glyph" id="quizGlyph">🐝</div>
+              <h3 id="quizAnimal"></h3>
+              <p id="quizDesc"></p>
+              <a href="#" class="btn btn-primary" id="quizStoryLink"
+                >Read my story</a
+              >
+              <br />
+              <button class="quiz-restart" id="quizRestart">Try again</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="buy" class="section-alt">
+      <div class="container">
+        <div class="cta-band" data-reveal>
+          <h2>Bring Amorosos Amaneceres home</h2>
+          <p>
+            Available on Amazon in print and digital formats. You can also read
+            it online for free, anytime.
+          </p>
+          <div class="hero-cta">
+            <a
+              href="https://www.amazon.com/"
+              target="_blank"
+              rel="noopener sponsored"
+              class="btn btn-primary"
+              >Buy on Amazon</a
+            >
+            <a href="/read.html?lang=en" class="btn btn-ghost"
+              >Read online for free</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ad-slot">
+      <div class="ad-inner" id="ad-slot-bottom">Ad Slot — AdSense</div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a href="/en/index.html" class="logo" style="color: #fff"
+            >Amorosos <span>Amaneceres</span></a
+          >
+          <p style="margin-top: 14px; max-width: 32ch">
+            Children's stories about animals and human values, for bedtime
+            reading.
+          </p>
+          <div class="support-links">
+            <a href="https://paypal.me/" target="_blank" rel="noopener"
+              >PayPal</a
+            >
+            <a href="https://ko-fi.com/" target="_blank" rel="noopener"
+              >Ko-fi</a
+            >
+            <a href="https://patreon.com/" target="_blank" rel="noopener"
+              >Patreon</a
+            >
+          </div>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#stories">Stories</a></li>
+            <li><a href="/read.html?lang=en">Read online</a></li>
+            <li><a href="#play">Play</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Cuentos (ES)</h4>
+          <ul id="footerStoriesEs"></ul>
+        </div>
+        <div>
+          <h4>Stories (EN)</h4>
+          <ul id="footerStoriesEn"></ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          © 2026 Amorosos Amaneceres · Ania Vallejo Placeres · All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      window.SITE_LANG = "en";
+    </script>
+    <script type="module" src="../js/main.js"></script>
+  </body>
+</html>
