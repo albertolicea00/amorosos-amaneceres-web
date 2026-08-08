@@ -9,29 +9,16 @@
   align-items: center;
   padding-top: 110px;
   overflow: hidden;
-  background: radial-gradient(120% 100% at 15% 10%, var(--dawn-1) 0%, var(--dawn-2) 32%, var(--dawn-3) 58%, var(--dawn-4) 78%, var(--dusk-1) 100%);
+  background-image: url("/assets/img/banner-hero.webp");
+  background-size: cover;
+  background-position: center 45%;
 }
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 80% 85%, rgba(255, 255, 255, 0.35), transparent 55%);
+  background: linear-gradient(180deg, rgba(244, 244, 244, 0.62) 0%, rgba(74, 24, 58, 0.32) 45%, rgba(74, 24, 58, 0.68) 100%);
   pointer-events: none;
-}
-.hero-sun {
-  position: absolute;
-  width: 420px;
-  height: 420px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #fff6da 0%, var(--gold-soft) 45%, transparent 70%);
-  top: -120px;
-  right: -80px;
-  filter: blur(2px);
-  animation: pulse-sun 6s ease-in-out infinite;
-}
-@keyframes pulse-sun {
-  0%, 100% { transform: scale(1); opacity: 0.9; }
-  50% { transform: scale(1.06); opacity: 1; }
 }
 .hero .container {
   position: relative;
