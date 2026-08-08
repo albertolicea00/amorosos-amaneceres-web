@@ -9,7 +9,7 @@ export function renderStoryCards(data) {
     .map(
       (s) => `
     <div class="story-card">
-      <span class="value-ribbon-absolute">${s.value}</span>
+      <span class="value-ribbon">${s.value}</span>
       <div class="emoji">${s.emoji}</div>
       <h3>${s.title}</h3>
       <div class="card-links">

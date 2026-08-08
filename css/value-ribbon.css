@@ -6,21 +6,24 @@
    flush with its corner.
    ============================================================ */
 
-.value-ribbon-absolute {
+.value-ribbon {
   position: absolute;
   top: 16px;
-  right: -42px;
+  right: -46px;
+  width: 150px;
   transform: rotate(45deg);
   transform-origin: center;
-  background: linear-gradient(135deg, var(--dawn-3), var(--dawn-4));
+  background: linear-gradient(135deg, var(--dusk-1), var(--dusk-2));
   color: var(--white);
   font-family: var(--font-body);
   font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  padding: 5px 46px;
-  box-shadow: 0 4px 12px rgba(243, 97, 122, 0.35);
+  text-align: center;
+  padding: 5px 0;
+  box-shadow: 0 4px 12px rgba(136, 97, 243, 0.35);
   z-index: 5;
   white-space: nowrap;
+  overflow: hidden;
 }
