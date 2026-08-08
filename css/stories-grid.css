@@ -24,6 +24,11 @@
   box-shadow: var(--shadow-soft);
 }
 .story-card .emoji { font-size: 2.2rem; }
+.story-card .emoji img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
 .story-card h3 { 
   font-size: 1.15rem; 
   margin-bottom: 2px; 
