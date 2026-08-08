@@ -29,12 +29,11 @@
   margin-top: auto;
   display: flex;
   gap: 10px;
-  padding-top: 10px;
 }
 .story-card .card-links a {
   font-size: 0.82rem;
   font-weight: 700;
-  color: var(--dawn-4);
+  color: var(--dusk-2);
 }
 
 @media (max-width: 980px) {
