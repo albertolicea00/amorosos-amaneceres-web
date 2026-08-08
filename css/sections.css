@@ -16,6 +16,7 @@ section { padding: 100px 0; position: relative; }
 .section-alt { background: var(--cream-2); }
 
 .ad-slot {
+  display: none;
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 24px;
