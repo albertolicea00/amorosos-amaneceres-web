@@ -11,7 +11,6 @@ It is designed to feel warm, playful, and beautiful from the very first click.
 ## ✨ What makes it special
 
 - 📚 A charming landing page to introduce the book
-- 🌄 A 3D online reading experience
 - 📖 Individual story pages for easier reading and SEO
 - 🎡 Fun interactions like a random story roulette
 - 🧠 A personality quiz with story recommendations
