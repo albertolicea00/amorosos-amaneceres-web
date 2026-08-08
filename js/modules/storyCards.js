@@ -14,7 +14,6 @@ export function renderStoryCards(data) {
       <h3>${s.title}</h3>
       <div class="card-links">
         <a href="/stories/${lang}/story-${s.id}.html">${data.ui.card_read}</a>
-        <a href="/read.html?story=${s.id}&lang=${lang}">${data.ui.card_3d}</a>
       </div>
     </div>
   `

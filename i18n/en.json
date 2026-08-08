@@ -2,7 +2,6 @@
   "lang": "en",
   "ui": {
     "card_read": "Read",
-    "card_3d": "View in 3D",
     "wheel_go": "Go to the story →",
     "quiz_cta": "Read my story",
     "quiz_desc_template": "Your little animal is the {animal}. Value to nurture: {value}."

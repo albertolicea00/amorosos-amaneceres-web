@@ -2,7 +2,6 @@
   "lang": "es",
   "ui": {
     "card_read": "Leer",
-    "card_3d": "Ver en 3D",
     "wheel_go": "Ir al cuento →",
     "quiz_cta": "Leer mi cuento",
     "quiz_desc_template": "Tu animalito es {animal}. Valor a cultivar: {value}."
