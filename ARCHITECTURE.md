@@ -28,13 +28,13 @@ css/  js/  i18n/  assets/       shared by every page above, at real root paths
 
 `vercel.json` rewrites clean public URLs to their real file location under `html/`:
 
-| Public URL | Actually serves |
-|---|---|
-| `/` , `/index.html` | `html/es/index.html` |
-| `/en` , `/en/index.html` | `html/en/index.html` |
+| Public URL                       | Actually serves                      |
+| -------------------------------- | ------------------------------------ |
+| `/` , `/index.html`              | `html/es/index.html`                 |
+| `/en` , `/en/index.html`         | `html/en/index.html`                 |
 | `/stories/{es\|en}/story-N.html` | `html/stories/{es\|en}/story-N.html` |
-| anything else under `/en/*` | `html/en/404.html`, status 404 |
-| anything else | `html/es/404.html`, status 404 |
+| anything else under `/en/*`      | `html/en/404.html`, status 404       |
+| anything else                    | `html/es/404.html`, status 404       |
 
 `{ "handle": "filesystem" }` is the first route — it lets real static files (`/css/style.css`, `/js/main.js`, everything in `assets/`) serve directly before any rewrite is considered, since those live at their literal paths and need no remapping.
 
@@ -87,5 +87,5 @@ js/story.js                     story-page entry (html/stories/{es,en}/story-N.h
 ## Known constraints
 
 - Ad slots, Amazon affiliate link, and PayPal/Ko-fi/Patreon links are **placeholders** — swap in real IDs/URLs before launch.
-- Not every story has a matching animal illustration in `assets/img/animal/` yet (only ant, bear, butterfly, duck, fox, hedgehog, rabbit exist) — this doesn't currently surface anywhere in the UI, but keep it in mind if animal imagery gets reintroduced elsewhere.
+- Not every story has a matching animal illustration in `assets/characters/` yet (only ant, bear, butterfly, duck, fox, hedgehog, rabbit exist) — this doesn't currently surface anywhere in the UI, but keep it in mind if animal imagery gets reintroduced elsewhere.
 - The `vercel.json` routing is load-bearing, not cosmetic — moving pages around under `html/` again, or migrating off Vercel, means updating it (or replacing it with the target host's equivalent) in the same change.

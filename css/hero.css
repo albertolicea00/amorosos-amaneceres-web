@@ -9,7 +9,7 @@
   align-items: center;
   padding-top: 110px;
   overflow: hidden;
-  background-image: url("/assets/img/banner-hero.webp");
+  background-image: url("/assets/banner-hero.webp");
   background-size: cover;
   background-position: center 45%;
 }
