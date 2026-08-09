@@ -7,6 +7,9 @@
     { "src": "/en", "dest": "/html/en/index.html" },
     { "src": "/es/index.html", "dest": "/html/es/index.html" },
     { "src": "/en/index.html", "dest": "/html/en/index.html" },
+    { "src": "/characters.html", "dest": "/html/es/characters.html" },
+    { "src": "/es/characters.html", "dest": "/html/es/characters.html" },
+    { "src": "/en/characters.html", "dest": "/html/en/characters.html" },
     { "src": "/stories/(es|en)/story-(\\d+)\\.html", "dest": "/html/stories/$1/story-$2.html" },
     { "src": "/en/(.*)", "dest": "/html/en/404.html", "status": 404 },
     { "src": "/(.*)", "dest": "/html/es/404.html", "status": 404 }

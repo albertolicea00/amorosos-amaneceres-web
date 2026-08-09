@@ -15,8 +15,10 @@ Actual HTML files live under `html/`, separate from `css/`, `js/`, `i18n/`, `ass
 ```
 html/es/index.html              Landing page, Spanish
 html/es/404.html                404, Spanish
+html/es/characters.html         Full character roster, Spanish
 html/en/index.html              Landing page, English
 html/en/404.html                404, English
+html/en/characters.html         Full character roster, English
 html/stories/es/story-{1-8}.html   One story, Spanish, full text
 html/stories/en/story-{1-8}.html   Same story, English, full text
 css/  js/  i18n/  assets/       shared by every page above, at real root paths
@@ -32,6 +34,8 @@ css/  js/  i18n/  assets/       shared by every page above, at real root paths
 | -------------------------------- | ------------------------------------ |
 | `/` , `/index.html`              | `html/es/index.html`                 |
 | `/en` , `/en/index.html`         | `html/en/index.html`                 |
+| `/characters.html` , `/es/characters.html` | `html/es/characters.html`  |
+| `/en/characters.html`            | `html/en/characters.html`            |
 | `/stories/{es\|en}/story-N.html` | `html/stories/{es\|en}/story-N.html` |
 | anything else under `/en/*`      | `html/en/404.html`, status 404       |
 | anything else                    | `html/es/404.html`, status 404       |
@@ -60,12 +64,16 @@ Landing pages are static per language (no JS text-swapping) so search engines se
 
 Each `html/stories/{lang}/story-N.html` is the **only** place a story's text lives — one file, one language, no duplication anywhere else. The story `<article id="story-content">` carries `data-title` / `data-animal` / `data-value` attributes describing itself, but nothing outside that file re-renders its prose.
 
+`i18n/characters.json` is the master list of every animal that appears anywhere in the book (slug, emoji, `name_es`, `name_en`) — the 8 story protagonists plus every animal that only shows up inside a story's prose. It is **not** fetched at runtime by any page; it's a hand-authoring reference for `html/{es,en}/characters.html`, whose roster grids are static markup per language (same "no client-side text-swapping" rule as the rest of the page copy — see i18n below). Add an animal there first, then hand-write its `.roster-card` into both `characters.html` files. Artwork is optional: each card's `<img onerror="this.parentElement.remove()">` just drops its avatar circle (the name label stays) when `assets/characters/{slug}.webp` doesn't exist yet — the `emoji` field is metadata only, not rendered as a fallback.
+
 ## i18n
 
 Two layers, deliberately different mechanisms for different content:
 
 1. **Page copy** (headings, nav labels, story text) — hand-authored per language, directly in each HTML file. Nothing to fetch, nothing to render client-side, nothing to flash-of-untranslated-content.
 2. **Dynamic UI data** (story card grid, footer story list, wheel labels, quiz questions) — lives in `/i18n/es.json` and `/i18n/en.json`, fetched at runtime by `js/modules/i18n.js`. This is the data these widgets need to exist at all (an 8-item array to loop over, quiz questions to render) — it can't be static markup the way page copy can.
+
+`/i18n/characters.json` is a third file in this directory but doesn't belong to either layer above — see "Content model" below.
 
 `getPageLang()` resolves the active language from `window.SITE_LANG` (a one-line inline `<script>` each landing/story page sets before loading the module).
 

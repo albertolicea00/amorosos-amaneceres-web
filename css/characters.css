@@ -12,6 +12,13 @@
   padding-bottom: 0 !important;
 }
 
+.txt-link {
+  font-size: 0.9rem;
+  font-weight: 200;
+  text-decoration:  underline;
+  color: var(--dusk-2);
+}
+
 .characters-scroll {
   overflow-x: auto;
   overflow-y: visible;
@@ -57,4 +64,57 @@
 @media (max-width: 640px) {
   .character-card { width: 120px; }
   .character-card img { width: 100px; height: 100px; }
+}
+
+/* ============================================================
+   Scope: roster — full character list page (/characters.html,
+   /en/characters.html). One card per entry in i18n/characters.json;
+   the avatar circle just disappears (name label stays) when the
+   artwork isn't ready yet.
+   ============================================================ */
+#roster-section {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.roster-header {
+  padding: 160px 0 20px;
+  text-align: center;
+}
+
+.roster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 26px;
+}
+
+.roster-card { text-align: center; }
+
+.roster-avatar {
+  width: 204px;
+  height: 204px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  /* background: var(--white); */
+  box-shadow: var(--shadow-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.roster-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 14px;
+}
+.roster-name {
+  display: none;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--dusk-2);
+}
+
+@media (max-width: 640px) {
+  .roster-grid { grid-template-columns: repeat(auto-fill, minmax(192px, 1fr)); gap: 18px; }
+  .roster-avatar { width: 182px; height: 182px; }
 }
