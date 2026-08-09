@@ -7,60 +7,215 @@
     "quiz_desc_template": "Your little animal is the {animal}. Value to nurture: {value}."
   },
   "stories": [
-    { "id": 1, "emoji": "🐜", "animal": "Ant",              "value": "Faith",       "title": "The Little Ant Who Searched for a Family" },
-    { "id": 2, "emoji": "🦆", "animal": "White Duck",       "value": "Discipline",  "title": "The Bridge of the Three Little Ducklings" },
-    { "id": 3, "emoji": "🦁", "animal": "Lioness",          "value": "Unity",       "title": "The Little Lioness and the Singing Cricket" },
-    { "id": 4, "emoji": "🐢", "animal": "Turtle",           "value": "Solidarity",  "title": "Cuosuelij, the Lazy Turtle" },
-    { "id": 5, "emoji": "🐇", "animal": "Rabbit",           "value": "Patience",    "title": "The Rabbit Who Stopped Hopping" },
-    { "id": 6, "emoji": "🦋", "animal": "Caterpillar & Butterfly", "value": "Respect", "title": "The Caterpillar Who Dreamed of Flying" },
-    { "id": 7, "emoji": "🐝", "animal": "Bee",              "value": "Love",        "title": "The Bee in Love with the Songbird" },
-    { "id": 8, "emoji": "🐑", "animal": "Sheep",            "value": "Family",      "title": "The Little Sheep and the Wolves of the Moon" }
+    {
+      "id": 1,
+      "emoji": "🐜",
+      "animal": "Ant",
+      "value": "Faith",
+      "title": "The Little Ant Who Searched for a Family"
+    },
+    {
+      "id": 2,
+      "emoji": "🦆",
+      "animal": "White Duck",
+      "value": "Discipline",
+      "title": "The Bridge of the Three Little Ducklings"
+    },
+    {
+      "id": 3,
+      "emoji": "🦁",
+      "animal": "Lioness",
+      "value": "Unity",
+      "title": "The Little Lioness and the Singing Cricket"
+    },
+    {
+      "id": 4,
+      "emoji": "🐢",
+      "animal": "Turtle",
+      "value": "Solidarity",
+      "title": "Cuosuelij, the Lazy Turtle"
+    },
+    {
+      "id": 5,
+      "emoji": "🐇",
+      "animal": "Rabbit",
+      "value": "Patience",
+      "title": "The Rabbit Who Stopped Hopping"
+    },
+    {
+      "id": 6,
+      "emoji": "🦋",
+      "animal": "Caterpillar & Butterfly",
+      "value": "Respect",
+      "title": "The Caterpillar Who Dreamed of Flying"
+    },
+    {
+      "id": 7,
+      "emoji": "🐝",
+      "animal": "Bee",
+      "value": "Love",
+      "title": "The Bee in Love with the Songbird"
+    },
+    {
+      "id": 8,
+      "emoji": "🐑",
+      "animal": "Sheep",
+      "value": "Family",
+      "title": "The Little Sheep and the Moon Wolves"
+    }
   ],
   "quiz": {
     "questions": [
       {
         "q": "When you face a big problem, what do you do first?",
         "options": [
-          { "text": "I look for help and trust it will work out", "score": { "1": 2, "7": 1 } },
-          { "text": "I follow the rules I've been taught", "score": { "2": 2 } },
-          { "text": "I gather my group and we solve it together", "score": { "3": 2, "4": 1 } },
-          { "text": "I calmly wait for the right moment", "score": { "5": 2 } }
+          {
+            "text": "I look for help and trust it will work out",
+            "score": {
+              "1": 2,
+              "7": 1
+            }
+          },
+          {
+            "text": "I follow the rules I've been taught",
+            "score": {
+              "2": 2
+            }
+          },
+          {
+            "text": "I gather my group and we solve it together",
+            "score": {
+              "3": 2,
+              "4": 1
+            }
+          },
+          {
+            "text": "I calmly wait for the right moment",
+            "score": {
+              "5": 2
+            }
+          }
         ]
       },
       {
         "q": "Your friends would say you are...",
         "options": [
-          { "text": "Hard-working and strong for your size", "score": { "1": 2 } },
-          { "text": "Tidy and responsible", "score": { "2": 2 } },
-          { "text": "Loyal, though sometimes mischievous", "score": { "3": 2 } },
-          { "text": "Calm and patient", "score": { "5": 2, "8": 1 } }
+          {
+            "text": "Hard-working and strong for your size",
+            "score": {
+              "1": 2
+            }
+          },
+          {
+            "text": "Tidy and responsible",
+            "score": {
+              "2": 2
+            }
+          },
+          {
+            "text": "Loyal, though sometimes mischievous",
+            "score": {
+              "3": 2
+            }
+          },
+          {
+            "text": "Calm and patient",
+            "score": {
+              "5": 2,
+              "8": 1
+            }
+          }
         ]
       },
       {
         "q": "What do you value most in your family?",
         "options": [
-          { "text": "That they always accept me as I am", "score": { "1": 2 } },
-          { "text": "That we trust one another", "score": { "2": 2, "8": 1 } },
-          { "text": "That we stay united no matter what", "score": { "3": 2, "8": 1 } },
-          { "text": "That we look out for each other as a team", "score": { "4": 2 } }
+          {
+            "text": "That they always accept me as I am",
+            "score": {
+              "1": 2
+            }
+          },
+          {
+            "text": "That we trust one another",
+            "score": {
+              "2": 2,
+              "8": 1
+            }
+          },
+          {
+            "text": "That we stay united no matter what",
+            "score": {
+              "3": 2,
+              "8": 1
+            }
+          },
+          {
+            "text": "That we look out for each other as a team",
+            "score": {
+              "4": 2
+            }
+          }
         ]
       },
       {
         "q": "You're given a heavy task. How do you react?",
         "options": [
-          { "text": "I carry it without complaining, however heavy", "score": { "1": 2 } },
-          { "text": "I share it with whoever is near", "score": { "4": 2, "6": 1 } },
-          { "text": "I sing or enjoy myself while doing it", "score": { "7": 2 } },
-          { "text": "I do it slowly, at my own pace", "score": { "5": 2 } }
+          {
+            "text": "I carry it without complaining, however heavy",
+            "score": {
+              "1": 2
+            }
+          },
+          {
+            "text": "I share it with whoever is near",
+            "score": {
+              "4": 2,
+              "6": 1
+            }
+          },
+          {
+            "text": "I sing or enjoy myself while doing it",
+            "score": {
+              "7": 2
+            }
+          },
+          {
+            "text": "I do it slowly, at my own pace",
+            "score": {
+              "5": 2
+            }
+          }
         ]
       },
       {
         "q": "What would you like people to respect about you?",
         "options": [
-          { "text": "My process of changing and growing", "score": { "6": 2 } },
-          { "text": "My space and my decisions", "score": { "6": 2, "3": 1 } },
-          { "text": "My calm way of being", "score": { "8": 2 } },
-          { "text": "My unconditional way of loving", "score": { "7": 2 } }
+          {
+            "text": "My process of changing and growing",
+            "score": {
+              "6": 2
+            }
+          },
+          {
+            "text": "My space and my decisions",
+            "score": {
+              "6": 2,
+              "3": 1
+            }
+          },
+          {
+            "text": "My calm way of being",
+            "score": {
+              "8": 2
+            }
+          },
+          {
+            "text": "My unconditional way of loving",
+            "score": {
+              "7": 2
+            }
+          }
         ]
       }
     ]
