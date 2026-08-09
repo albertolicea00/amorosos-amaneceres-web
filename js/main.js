@@ -11,11 +11,13 @@ import { renderStoryCards, renderFooterList } from "./modules/storyCards.js";
 import { initWheel } from "./modules/wheel.js";
 import { initQuiz } from "./modules/quiz.js";
 import { initLangDropdowns } from "./modules/langDropdown.js";
+import { initCharactersMarquee } from "./modules/charactersMarquee.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   initNavbar();
   initReveal();
   initLangDropdowns();
+  initCharactersMarquee();
 
   const lang = getPageLang();
   const ownData = await loadI18n(lang);

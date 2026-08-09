@@ -1,6 +1,10 @@
 /* ============================================================
-   Scope: characters — horizontal-scroll gallery of animal
-   character art, between the play section and the buy band.
+   Scope: characters — auto-scrolling, seamless-loop gallery of
+   animal character art, between the play section and the buy
+   band. Scrollbar hidden, but the strip is still a real native
+   scroll container — wheel/touch/drag all work; JS drives a slow
+   auto-advance (paused while the user is actively interacting)
+   and a scale/lift on whichever card sits nearest center.
    ============================================================ */
 
 #characters {
@@ -10,23 +14,26 @@
 
 .characters-scroll {
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding: 8px 24px 20px;
-  scrollbar-width: thin;
+  overflow-y: visible;
+  padding: 34px 0 40px;
+  cursor: grab;
+  scrollbar-width: none;
 }
+.characters-scroll::-webkit-scrollbar { display: none; }
+.characters-scroll.dragging { cursor: grabbing; }
+
 .characters-track {
   display: flex;
   gap: 22px;
   width: max-content;
-  margin: 0 auto;
-  padding: 0 4px;
 }
+
 .character-card {
-  scroll-snap-align: center;
   flex: 0 0 auto;
   width: 150px;
   text-align: center;
+  transition: transform 0.2s ease;
+  will-change: transform;
 }
 .character-card img {
   width: 130px;
@@ -37,11 +44,7 @@
   box-shadow: var(--shadow-card);
   padding: 10px;
   margin: 0 auto 10px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-.character-card:hover img {
-  transform: translateY(-6px) scale(1.04);
-  box-shadow: var(--shadow-soft);
+  pointer-events: none;
 }
 .character-card span {
   display: block;
