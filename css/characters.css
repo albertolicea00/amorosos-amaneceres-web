@@ -34,6 +34,7 @@
   text-align: center;
   transition: transform 0.2s ease;
   will-change: transform;
+  cursor: pointer;
 }
 .character-card img {
   width: 130px;
