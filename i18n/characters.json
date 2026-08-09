@@ -2,271 +2,325 @@
   "characters": [
     {
       "slug": "ant",
+      "emoji": "🐜",
       "name_es": "Hormiga",
       "name_en": "Ant"
     },
     {
       "slug": "duck",
+      "emoji": "🦆",
       "name_es": "Pato",
       "name_en": "Duck"
     },
     {
       "slug": "lion",
+      "emoji": "🦁",
       "name_es": "León",
       "name_en": "Lion"
     },
     {
       "slug": "cricket",
+      "emoji": "🦗",
       "name_es": "Grillo",
       "name_en": "Cricket"
     },
     {
       "slug": "turtle",
+      "emoji": "🐢",
       "name_es": "Tortuga",
       "name_en": "Turtle"
     },
     {
       "slug": "rabbit",
+      "emoji": "🐰",
       "name_es": "Conejo",
       "name_en": "Rabbit"
     },
     {
       "slug": "caterpillar",
+      "emoji": "🐛",
       "name_es": "Oruga",
       "name_en": "Caterpillar"
     },
     {
       "slug": "butterfly",
+      "emoji": "🦋",
       "name_es": "Mariposa",
       "name_en": "Butterfly"
     },
     {
       "slug": "bee",
+      "emoji": "🐝",
       "name_es": "Abeja",
       "name_en": "Bee"
     },
     {
       "slug": "grassquit",
+      "emoji": "🐦",
       "name_es": "Tomeguín",
       "name_en": "Grassquit"
     },
     {
       "slug": "sheep",
+      "emoji": "🐑",
       "name_es": "Oveja",
       "name_en": "Sheep"
     },
     {
       "slug": "wolf",
+      "emoji": "🐺",
       "name_es": "Lobo",
       "name_en": "Wolf"
     },
     {
       "slug": "bear",
+      "emoji": "🐻",
       "name_es": "Oso",
       "name_en": "Bear"
     },
     {
       "slug": "fox",
+      "emoji": "🦊",
       "name_es": "Zorro",
       "name_en": "Fox"
     },
     {
       "slug": "hedgehog",
+      "emoji": "🦔",
       "name_es": "Erizo",
       "name_en": "Hedgehog"
     },
     {
       "slug": "cat",
+      "emoji": "🐱",
       "name_es": "Gato",
       "name_en": "Cat"
     },
     {
       "slug": "dog",
+      "emoji": "🐶",
       "name_es": "Perro",
       "name_en": "Dog"
     },
     {
       "slug": "cow",
+      "emoji": "🐮",
       "name_es": "Vaca",
       "name_en": "Cow"
     },
     {
       "slug": "giraffe",
+      "emoji": "🦒",
       "name_es": "Jirafa",
       "name_en": "Giraffe"
     },
     {
       "slug": "hen",
+      "emoji": "🐔",
       "name_es": "Gallina",
       "name_en": "Hen"
     },
     {
       "slug": "rooster",
+      "emoji": "🐓",
       "name_es": "Gallo",
       "name_en": "Rooster"
     },
     {
       "slug": "pig",
+      "emoji": "🐷",
       "name_es": "Cerdito",
       "name_en": "Piglet"
     },
     {
       "slug": "peep",
+      "emoji": "🐤",
       "name_es": "Pollito",
       "name_en": "Chick"
     },
     {
       "slug": "elephant",
+      "emoji": "🐘",
       "name_es": "Elefante",
       "name_en": "Elephant"
     },
     {
       "slug": "mouse",
+      "emoji": "🐭",
       "name_es": "Ratón",
       "name_en": "Mouse"
     },
     {
       "slug": "horse",
+      "emoji": "🐴",
       "name_es": "Caballo",
       "name_en": "Horse"
     },
     {
       "slug": "goat",
+      "emoji": "🐐",
       "name_es": "Cabra",
       "name_en": "Goat"
     },
     {
       "slug": "monkey",
+      "emoji": "🐵",
       "name_es": "Mono",
       "name_en": "Monkey"
     },
     {
       "slug": "sparrow",
+      "emoji": "🐦",
       "name_es": "Gorrión",
       "name_en": "Sparrow"
     },
     {
       "slug": "parrot",
+      "emoji": "🦜",
       "name_es": "Loro",
       "name_en": "Parrot"
     },
     {
       "slug": "eagle",
+      "emoji": "🦅",
       "name_es": "Águila",
       "name_en": "Eagle"
     },
     {
       "slug": "snake",
+      "emoji": "🐍",
       "name_es": "Serpiente",
       "name_en": "Snake"
     },
     {
       "slug": "lizard",
+      "emoji": "🦎",
       "name_es": "Lagartija",
       "name_en": "Lizard"
     },
     {
       "slug": "frog",
+      "emoji": "🐸",
       "name_es": "Rana",
       "name_en": "Frog"
     },
     {
       "slug": "dolphin",
+      "emoji": "🐬",
       "name_es": "Delfín",
       "name_en": "Dolphin"
     },
     {
       "slug": "fish",
+      "emoji": "🐟",
       "name_es": "Pez",
       "name_en": "Fish"
     },
     {
       "slug": "shark",
+      "emoji": "🦈",
       "name_es": "Tiburón",
       "name_en": "Shark"
     },
     {
       "slug": "deer",
+      "emoji": "🦌",
       "name_es": "Venado",
       "name_en": "Deer"
     },
     {
       "slug": "squirrel",
+      "emoji": "🐿️",
       "name_es": "Ardilla",
       "name_en": "Squirrel"
     },
     {
       "slug": "boar",
+      "emoji": "🐗",
       "name_es": "Jabalí",
       "name_en": "Boar"
     },
     {
       "slug": "raccoon",
+      "emoji": "🦝",
       "name_es": "Mapache",
       "name_en": "Raccoon"
     },
     {
       "slug": "bat",
+      "emoji": "🦇",
       "name_es": "Murciélago",
       "name_en": "Bat"
     },
     {
       "slug": "owl",
+      "emoji": "🦉",
       "name_es": "Búho",
       "name_en": "Owl"
     },
     {
       "slug": "woodpecker",
+      "emoji": "🐦",
       "name_es": "Carpintero",
       "name_en": "Woodpecker"
     },
     {
       "slug": "hawk",
+      "emoji": "🦅",
       "name_es": "Halcón",
       "name_en": "Hawk"
     },
     {
       "slug": "crow",
+      "emoji": "🐦⬛",
       "name_es": "Cuervo",
       "name_en": "Crow"
     },
     {
       "slug": "spider",
+      "emoji": "🕷️",
       "name_es": "Araña",
       "name_en": "Spider"
     },
     {
       "slug": "bull",
+      "emoji": "🐂",
       "name_es": "Toro",
       "name_en": "Bull"
     },
     {
       "slug": "ox",
+      "emoji": "🐂",
       "name_es": "Buey",
       "name_en": "Ox"
     },
     {
       "slug": "donkey",
+      "emoji": "🫏",
       "name_es": "Burro",
       "name_en": "Donkey"
     },
     {
       "slug": "goose",
+      "emoji": "🪿",
       "name_es": "Ganso",
       "name_en": "Goose"
     },
     {
       "slug": "turkey",
+      "emoji": "🦃",
       "name_es": "Pavo",
       "name_en": "Turkey"
     },
     {
       "slug": "hamster",
+      "emoji": "🐹",
       "name_es": "Hámster",
       "name_en": "Hamster"
     },
     {
       "slug": "canary",
+      "emoji": "🐤",
       "name_es": "Canario",
       "name_en": "Canary"
     }
