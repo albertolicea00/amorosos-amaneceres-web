@@ -10,7 +10,7 @@ export const ANIMAL_SLUG = {
   5: "rabbit",
   6: "butterfly",
   7: "bee",
-  8: "fox",
+  8: "sheep",
 };
 
 export function characterImg(storyId, fallbackEmoji, extraAttrs = "") {
