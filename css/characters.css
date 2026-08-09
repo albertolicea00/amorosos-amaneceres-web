@@ -89,7 +89,7 @@
 .roster-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 26px;
+  /* gap: 26px; */
 }
 
 .roster-card {
@@ -128,6 +128,6 @@
 }
 
 @media (max-width: 640px) {
-  .roster-grid { grid-template-columns: repeat(auto-fill, minmax(192px, 1fr)); gap: 18px; }
-  .roster-avatar { width: 182px; height: 182px; }
+  .roster-grid { grid-template-columns: repeat(auto-fill, minmax(99px, 1fr)); gap: 18px; }
+  .roster-avatar { width: 162px; height: 162px; }
 }
