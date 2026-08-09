@@ -1,5 +1,8 @@
 {
   "recommendations": [
-    "ritwickdey.LiveServer"
+    "ritwickdey.LiveServer",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "stylelint.vscode-stylelint"
   ]
 }

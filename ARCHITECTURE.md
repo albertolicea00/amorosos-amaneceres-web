@@ -84,6 +84,41 @@ js/story.js                     story-page entry (html/stories/{es,en}/story-N.h
 └─ modules/langDropdown.js       (shared)
 ```
 
+## Formatting & lint (dev tooling)
+
+Not part of the runtime — the site still ships with zero Node deps. Tooling is opt-in, run via `make`.
+
+### Tools
+
+| Tool       | Scope          | Config file            |
+| ---------- | -------------- | ---------------------- |
+| Prettier   | HTML/CSS/JS    | `.prettierrc`          |
+| ESLint     | `js/**/*.js`   | `eslint.config.mjs`    |
+| Stylelint  | `css/**/*.css` | `.stylelintrc.json`    |
+
+Prettier ignores `assets/`, `public/`, `book/` (see `.prettierignore`). ESLint ignores `assets/`, `public/`, `book/`, `i18n/` via the `ignores` block.
+
+### Make targets
+
+`make check` — reports whether each tool is installed, and how to install the ones that are missing.
+
+| Command             | Effect                                        |
+| ------------------- | --------------------------------------------- |
+| `make check`        | Show install status for all three tools       |
+| `make install`      | Install prettier, eslint, stylelint globally  |
+| `make format`       | Prettier `--write` (reformats files)          |
+| `make format-check` | Prettier `--check` (no writes)                |
+| `make lint-js`      | ESLint on `js/`                               |
+| `make lint-css`     | Stylelint on `css/`                           |
+| `make lint`         | `lint-js` + `lint-css`                        |
+| `make verify`       | `format-check` + `lint` — full check, no edits |
+
+Any target that needs a missing tool exits with the install command instead of failing silently.
+
+### Editor
+
+`.vscode/settings.json` wires Prettier as the default formatter with format-on-save, and enables ESLint/Stylelint validation. `.vscode/extensions.json` recommends the four extensions (Live Server, Prettier, ESLint, Stylelint).
+
 ## Known constraints
 
 - Ad slots, Amazon affiliate link, and PayPal/Ko-fi/Patreon links are **placeholders** — swap in real IDs/URLs before launch.

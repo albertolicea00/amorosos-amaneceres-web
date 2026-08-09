@@ -1,0 +1,21 @@
+{
+  "rules": {
+    "indentation": 2,
+    "string-quotes": "double",
+    "color-hex-length": "short",
+    "max-empty-lines": 2,
+    "no-duplicate-selectors": true,
+    "no-eof-newline": true,
+    "no-missing-end-of-source-newline": true,
+    "declaration-block-no-duplicate-properties": true,
+    "declaration-block-trailing-semicolon": "always",
+    "block-closing-brace-newline-after": "always",
+    "color-no-invalid-hex": true,
+    "number-leading-zero": "never",
+    "number-no-trailing-zeros": true,
+    "unit-no-unknown": true,
+    "property-no-unknown": true,
+    "selector-type-no-unknown": true,
+    "string-no-newline": true
+  }
+}
