@@ -25,6 +25,7 @@
   padding: 34px 0 40px;
   cursor: grab;
   scrollbar-width: none;
+  scroll-behavior: auto;
 }
 .characters-scroll::-webkit-scrollbar { display: none; }
 .characters-scroll.dragging { cursor: grabbing; }
