@@ -74,8 +74,13 @@
    ============================================================ */
 #roster-section {
   padding-top: 0 !important;
-  padding-bottom: 0 !important;
 }
+
+#roster-section + section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
 .roster-header {
   padding: 160px 0 20px;
   text-align: center;
@@ -87,7 +92,15 @@
   gap: 26px;
 }
 
-.roster-card { text-align: center; }
+.roster-card {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+.roster-card:hover,
+.roster-card:active {
+  transform: translateY(-4px);
+}
 
 .roster-avatar {
   width: 204px;

@@ -64,7 +64,9 @@ Landing pages are static per language (no JS text-swapping) so search engines se
 
 Each `html/stories/{lang}/story-N.html` is the **only** place a story's text lives — one file, one language, no duplication anywhere else. The story `<article id="story-content">` carries `data-title` / `data-animal` / `data-value` attributes describing itself, but nothing outside that file re-renders its prose.
 
-`i18n/characters.json` is the master list of every animal that appears anywhere in the book (slug, emoji, `name_es`, `name_en`) — the 8 story protagonists plus every animal that only shows up inside a story's prose. It is **not** fetched at runtime by any page; it's a hand-authoring reference for `html/{es,en}/characters.html`, whose roster grids are static markup per language (same "no client-side text-swapping" rule as the rest of the page copy — see i18n below). Add an animal there first, then hand-write its `.roster-card` into both `characters.html` files. Artwork is optional: each card's `<img onerror="this.parentElement.remove()">` just drops its avatar circle (the name label stays) when `assets/characters/{slug}.webp` doesn't exist yet — the `emoji` field is metadata only, not rendered as a fallback.
+`i18n/characters.json` is **not** a list of story characters — it's the roster for a separate play/explore feature (slug, emoji, `name_es`, `name_en` per entry). `html/{es,en}/characters.html` is a discovery gallery of animal friends distinct from the 8 real story protagonists (those live in `i18n/{es,en}.json` and are what the index page's `#characters` marquee and the 8 `stories-grid` cards actually represent). The roster page exists for kids to tap around and explore, not to browse story content. It is **not** fetched at runtime by any page; it's a hand-authoring reference for `html/{es,en}/characters.html`, whose grids are static markup per language (same "no client-side text-swapping" rule as the rest of the page copy — see i18n below). Add an animal there first, then hand-write its `.roster-card` into both `characters.html` files. Artwork is optional: each card's `<img onerror="this.parentElement.remove()">` just drops its avatar circle (the name label stays) when `assets/characters/{slug}.webp` doesn't exist yet — the `emoji` field is metadata only, not rendered as a fallback.
+
+Each `.roster-card` also carries `data-slug="{slug}"`. Clicking one plays `assets/sounds/animals/{slug}.mp3` (via `js/modules/animalToast.js`) and slides up a bottom toast with the card's name. Sound is best-effort — most slugs don't have a recording yet, and a missing `.mp3` just means silence, not a broken click.
 
 ## i18n
 
@@ -79,10 +81,10 @@ Two layers, deliberately different mechanisms for different content:
 
 ## JS module map
 
-Everything is a small, single-purpose ES module under `js/modules/`; `js/main.js` is the one entry point (loaded by the two landing pages) that imports and wires them together, and `js/story.js` is a much smaller entry point (loaded by every story page) that only wires up the language dropdown.
+Everything is a small, single-purpose ES module under `js/modules/`; `js/main.js` is the one entry point (loaded by the landing pages and the character-roster pages) that imports and wires them together, and `js/story.js` is a much smaller entry point (loaded by every story page) that only wires up the language dropdown.
 
 ```
-js/main.js                      landing-page entry (html/es/index.html, html/en/index.html)
+js/main.js                      landing + roster entry (html/{es,en}/index.html, html/{es,en}/characters.html)
 ├─ modules/i18n.js               getPageLang(), loadI18n()
 ├─ modules/navbar.js             scroll shadow + mobile menu
 ├─ modules/reveal.js             IntersectionObserver fade-in
@@ -90,6 +92,8 @@ js/main.js                      landing-page entry (html/es/index.html, html/en/
 ├─ modules/wheel.js              canvas "ruleta" wheel-of-fortune
 ├─ modules/quiz.js               personality quiz → story recommendation
 ├─ modules/confetti.js           canvas streamer burst (wheel + quiz)
+├─ modules/charactersMarquee.js  index-page auto-scrolling character strip
+├─ modules/animalToast.js        characters.html: click a roster card → sound + bottom toast
 └─ modules/langDropdown.js       open/close for the ES/EN dropdown
 
 js/story.js                     story-page entry (html/stories/{es,en}/story-N.html)
