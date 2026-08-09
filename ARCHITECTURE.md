@@ -40,7 +40,11 @@ css/  js/  i18n/  assets/       shared by every page above, at real root paths
 
 **This is Vercel-specific.** It relies on Vercel's legacy `routes` config (regex `src`/`dest` with capture groups, plus a `status` override for the 404 pair) — a different static host (Netlify, GitHub Pages, plain Apache) would need an equivalent redirect/rewrite config of its own, or the `html/` split would need to go away and pages would move back to serving from their public path directly.
 
-**Local preview:** because internal links are root-relative (see below), opening any file directly — e.g. VS Code's "Open with Live Server" on `html/es/index.html` — renders correctly even though there's no rewrite engine locally; the URL bar just shows the real file path (`/html/es/index.html`) instead of the clean one.
+**Local preview (recommended): Vercel CLI.** `npx vercel dev` runs the real `vercel.json` route table locally, so the URL bar matches production exactly — `/`, `/en`, `/stories/es/story-1.html`, and the 404 pairs all behave as they will on Vercel. See "Running locally with Vercel CLI" below.
+
+Because internal links are root-relative (see below), a lighter alternative also works: opening any file directly — e.g. VS Code's "Open with Live Server" on `html/es/index.html` — renders correctly even though Live Server has no rewrite engine; the URL bar just shows the real file path (`/html/es/index.html`) instead of the clean one. Live Server cannot be made to mirror `vercel.json` routes.
+
+**Deprecated: `server.js`.** A previous iteration shipped a hand-rolled zero-dependency server (`node server.js`) that re-read `vercel.json` and applied its routes in Node. The idea was to get production-faithful URLs locally without any install step. It worked, but it was a parallel reimplementation of Vercel's own routing that could drift from `vercel.json` over time. **The Vercel CLI replaces it completely** — `npx vercel dev` does exactly what `server.js` tried to do, using Vercel's own engine, so the file is kept only for historical reference and should not be used.
 
 ## Routing (public URLs)
 
@@ -84,9 +88,25 @@ js/story.js                     story-page entry (html/stories/{es,en}/story-N.h
 └─ modules/langDropdown.js       (shared)
 ```
 
+## Running locally with Vercel CLI
+
+The Vercel CLI (`vercel`) is the one dev dependency for serving this repo — it reads `vercel.json` and applies the exact same routes as production, no separate server config needed.
+
+| Command                             | Effect                                      |
+| ----------------------------------- | ------------------------------------------- |
+| `npm i -g vercel`                   | Install the CLI once (or `make install-vercel`) |
+| `vercel login`                      | Authenticate (needed for `dev` and deploy)  |
+| `vercel dev`                        | Serve locally at `http://localhost:3000`    |
+| `vercel`                            | Preview deployment (creates a `*.vercel.app` URL) |
+| `vercel --prod`                     | Production deployment                       |
+
+Each command is also exposed as a `make` target — `make login`, `make dev`, `make preview`, `make deploy` — which runs the same Vercel CLI call with an installed-tool check first.
+
+`vercel dev` uses Vercel's own routing engine, so local URLs are identical to production: `/`, `/en`, `/stories/es/story-1.html`, and the 404 pairs. This is the recommended local workflow; everything else below is optional tooling.
+
 ## Formatting & lint (dev tooling)
 
-Not part of the runtime — the site still ships with zero Node deps. Tooling is opt-in, run via `make`.
+Not part of the runtime — the site still ships with zero Node deps. Tooling is opt-in, run via `npx` (no `package.json`, nothing to install).
 
 ### Tools
 
@@ -98,22 +118,20 @@ Not part of the runtime — the site still ships with zero Node deps. Tooling is
 
 Prettier ignores `assets/`, `public/`, `book/` (see `.prettierignore`). ESLint ignores `assets/`, `public/`, `book/`, `i18n/` via the `ignores` block.
 
-### Make targets
+### Commands (make)
 
-`make check` — reports whether each tool is installed, and how to install the ones that are missing.
+| Command           | Effect                                       |
+| ----------------- | -------------------------------------------- |
+| `make check`      | Show which tools are installed               |
+| `make install`    | Install prettier, eslint, stylelint, vercel  |
+| `make format`     | Format everything (HTML/CSS/JS)              |
+| `make format-check` | Check format only, no writes               |
+| `make lint-js`    | ESLint on `js/`                              |
+| `make lint-css`   | Stylelint on `css/`                          |
+| `make lint`       | `lint-js` + `lint-css`                       |
+| `make verify`     | `format-check` + `lint` — full check, no edits |
 
-| Command             | Effect                                        |
-| ------------------- | --------------------------------------------- |
-| `make check`        | Show install status for all three tools       |
-| `make install`      | Install prettier, eslint, stylelint globally  |
-| `make format`       | Prettier `--write` (reformats files)          |
-| `make format-check` | Prettier `--check` (no writes)                |
-| `make lint-js`      | ESLint on `js/`                               |
-| `make lint-css`     | Stylelint on `css/`                           |
-| `make lint`         | `lint-js` + `lint-css`                        |
-| `make verify`       | `format-check` + `lint` — full check, no edits |
-
-Any target that needs a missing tool exits with the install command instead of failing silently.
+There is no `package.json` in this repo — `make` wraps the tools directly (`make format`, `make lint`, ...), and each target tells you how to install a missing tool instead of failing silently. The raw `npx` commands work too if you prefer them. These are **dev-only** — they are not part of the site, the deploy, or any build step. The shipped artifact stays zero-Node; if you pull the repo elsewhere and never run make, nothing breaks.
 
 ### Editor
 
