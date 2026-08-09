@@ -1,0 +1,56 @@
+/* ============================================================
+   Scope: characters — horizontal-scroll gallery of animal
+   character art, between the play section and the buy band.
+   ============================================================ */
+
+#characters {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.characters-scroll {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 8px 24px 20px;
+  scrollbar-width: thin;
+}
+.characters-track {
+  display: flex;
+  gap: 22px;
+  width: max-content;
+  margin: 0 auto;
+  padding: 0 4px;
+}
+.character-card {
+  scroll-snap-align: center;
+  flex: 0 0 auto;
+  width: 150px;
+  text-align: center;
+}
+.character-card img {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  /* background: var(--white); */
+  border-radius: 50%;
+  box-shadow: var(--shadow-card);
+  padding: 10px;
+  margin: 0 auto 10px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.character-card:hover img {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: var(--shadow-soft);
+}
+.character-card span {
+  display: block;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--dusk-2);
+}
+
+@media (max-width: 640px) {
+  .character-card { width: 120px; }
+  .character-card img { width: 100px; height: 100px; }
+}
