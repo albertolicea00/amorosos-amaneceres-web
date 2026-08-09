@@ -1,8 +1,13 @@
 // Scope: animalToast — clicking a roster card (/characters.html) plays
-// that animal's sound from assets/sounds/animals/{slug}.mp3 and slides
-// up a bottom toast with its name. Sound is best-effort: not every slug
-// in i18n/characters.json has a recording yet, so a missing file just
-// means no sound, never a broken click.
+// that animal's sound from assets/sounds/animals/{slug}.mp3, bursts the
+// confetti streamers, and slides up a bottom toast with its name. Sound
+// is best-effort: not every slug in i18n/characters.json has a
+// recording yet, so a missing file just means no sound, never a
+// broken click.
+
+import { burstConfetti } from "./confetti.js";
+
+const TOAST_DURATION_MS = 7000;
 
 const audioCache = {};
 
@@ -29,7 +34,7 @@ function showAnimalToast(name) {
   void toastEl.offsetWidth;
   toastEl.classList.add("show");
   clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => toastEl.classList.remove("show"), 2200);
+  toastTimer = setTimeout(() => toastEl.classList.remove("show"), TOAST_DURATION_MS);
 }
 
 export function initRosterSounds() {
@@ -42,5 +47,6 @@ export function initRosterSounds() {
     const name = card.querySelector(".roster-name")?.textContent ?? "";
     playAnimalSound(slug);
     showAnimalToast(name);
+    burstConfetti();
   });
 }
