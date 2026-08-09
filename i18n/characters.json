@@ -1,0 +1,274 @@
+{
+  "characters": [
+    {
+      "slug": "ant",
+      "name_es": "Hormiga",
+      "name_en": "Ant"
+    },
+    {
+      "slug": "duck",
+      "name_es": "Pato",
+      "name_en": "Duck"
+    },
+    {
+      "slug": "lion",
+      "name_es": "León",
+      "name_en": "Lion"
+    },
+    {
+      "slug": "cricket",
+      "name_es": "Grillo",
+      "name_en": "Cricket"
+    },
+    {
+      "slug": "turtle",
+      "name_es": "Tortuga",
+      "name_en": "Turtle"
+    },
+    {
+      "slug": "rabbit",
+      "name_es": "Conejo",
+      "name_en": "Rabbit"
+    },
+    {
+      "slug": "caterpillar",
+      "name_es": "Oruga",
+      "name_en": "Caterpillar"
+    },
+    {
+      "slug": "butterfly",
+      "name_es": "Mariposa",
+      "name_en": "Butterfly"
+    },
+    {
+      "slug": "bee",
+      "name_es": "Abeja",
+      "name_en": "Bee"
+    },
+    {
+      "slug": "grassquit",
+      "name_es": "Tomeguín",
+      "name_en": "Grassquit"
+    },
+    {
+      "slug": "sheep",
+      "name_es": "Oveja",
+      "name_en": "Sheep"
+    },
+    {
+      "slug": "wolf",
+      "name_es": "Lobo",
+      "name_en": "Wolf"
+    },
+    {
+      "slug": "bear",
+      "name_es": "Oso",
+      "name_en": "Bear"
+    },
+    {
+      "slug": "fox",
+      "name_es": "Zorro",
+      "name_en": "Fox"
+    },
+    {
+      "slug": "hedgehog",
+      "name_es": "Erizo",
+      "name_en": "Hedgehog"
+    },
+    {
+      "slug": "cat",
+      "name_es": "Gato",
+      "name_en": "Cat"
+    },
+    {
+      "slug": "dog",
+      "name_es": "Perro",
+      "name_en": "Dog"
+    },
+    {
+      "slug": "cow",
+      "name_es": "Vaca",
+      "name_en": "Cow"
+    },
+    {
+      "slug": "giraffe",
+      "name_es": "Jirafa",
+      "name_en": "Giraffe"
+    },
+    {
+      "slug": "hen",
+      "name_es": "Gallina",
+      "name_en": "Hen"
+    },
+    {
+      "slug": "rooster",
+      "name_es": "Gallo",
+      "name_en": "Rooster"
+    },
+    {
+      "slug": "pig",
+      "name_es": "Cerdito",
+      "name_en": "Piglet"
+    },
+    {
+      "slug": "peep",
+      "name_es": "Pollito",
+      "name_en": "Chick"
+    },
+    {
+      "slug": "elephant",
+      "name_es": "Elefante",
+      "name_en": "Elephant"
+    },
+    {
+      "slug": "mouse",
+      "name_es": "Ratón",
+      "name_en": "Mouse"
+    },
+    {
+      "slug": "horse",
+      "name_es": "Caballo",
+      "name_en": "Horse"
+    },
+    {
+      "slug": "goat",
+      "name_es": "Cabra",
+      "name_en": "Goat"
+    },
+    {
+      "slug": "monkey",
+      "name_es": "Mono",
+      "name_en": "Monkey"
+    },
+    {
+      "slug": "sparrow",
+      "name_es": "Gorrión",
+      "name_en": "Sparrow"
+    },
+    {
+      "slug": "parrot",
+      "name_es": "Loro",
+      "name_en": "Parrot"
+    },
+    {
+      "slug": "eagle",
+      "name_es": "Águila",
+      "name_en": "Eagle"
+    },
+    {
+      "slug": "snake",
+      "name_es": "Serpiente",
+      "name_en": "Snake"
+    },
+    {
+      "slug": "lizard",
+      "name_es": "Lagartija",
+      "name_en": "Lizard"
+    },
+    {
+      "slug": "frog",
+      "name_es": "Rana",
+      "name_en": "Frog"
+    },
+    {
+      "slug": "dolphin",
+      "name_es": "Delfín",
+      "name_en": "Dolphin"
+    },
+    {
+      "slug": "fish",
+      "name_es": "Pez",
+      "name_en": "Fish"
+    },
+    {
+      "slug": "shark",
+      "name_es": "Tiburón",
+      "name_en": "Shark"
+    },
+    {
+      "slug": "deer",
+      "name_es": "Venado",
+      "name_en": "Deer"
+    },
+    {
+      "slug": "squirrel",
+      "name_es": "Ardilla",
+      "name_en": "Squirrel"
+    },
+    {
+      "slug": "boar",
+      "name_es": "Jabalí",
+      "name_en": "Boar"
+    },
+    {
+      "slug": "raccoon",
+      "name_es": "Mapache",
+      "name_en": "Raccoon"
+    },
+    {
+      "slug": "bat",
+      "name_es": "Murciélago",
+      "name_en": "Bat"
+    },
+    {
+      "slug": "owl",
+      "name_es": "Búho",
+      "name_en": "Owl"
+    },
+    {
+      "slug": "woodpecker",
+      "name_es": "Carpintero",
+      "name_en": "Woodpecker"
+    },
+    {
+      "slug": "hawk",
+      "name_es": "Halcón",
+      "name_en": "Hawk"
+    },
+    {
+      "slug": "crow",
+      "name_es": "Cuervo",
+      "name_en": "Crow"
+    },
+    {
+      "slug": "spider",
+      "name_es": "Araña",
+      "name_en": "Spider"
+    },
+    {
+      "slug": "bull",
+      "name_es": "Toro",
+      "name_en": "Bull"
+    },
+    {
+      "slug": "ox",
+      "name_es": "Buey",
+      "name_en": "Ox"
+    },
+    {
+      "slug": "donkey",
+      "name_es": "Burro",
+      "name_en": "Donkey"
+    },
+    {
+      "slug": "goose",
+      "name_es": "Ganso",
+      "name_en": "Goose"
+    },
+    {
+      "slug": "turkey",
+      "name_es": "Pavo",
+      "name_en": "Turkey"
+    },
+    {
+      "slug": "hamster",
+      "name_es": "Hámster",
+      "name_en": "Hamster"
+    },
+    {
+      "slug": "canary",
+      "name_es": "Canario",
+      "name_en": "Canary"
+    }
+  ]
+}
