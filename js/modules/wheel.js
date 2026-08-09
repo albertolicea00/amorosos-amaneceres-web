@@ -4,7 +4,7 @@
 // re-shows the wheel instead of the result.
 
 import { burstConfetti } from "./confetti.js";
-import { characterImg } from "./animalSlug.js";
+import { characterImg } from "./characterSlug.js";
 
 export function initWheel(data) {
   const canvas = document.getElementById("wheel-canvas");

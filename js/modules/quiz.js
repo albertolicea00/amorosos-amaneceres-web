@@ -1,7 +1,7 @@
 // Scope: quiz — personality quiz that maps answers to a story.
 
 import { burstConfetti } from "./confetti.js";
-import { characterImg } from "./animalSlug.js";
+import { characterImg } from "./characterSlug.js";
 
 function showQuizStep(i) {
   document.querySelectorAll(".quiz-step").forEach((el) => {
