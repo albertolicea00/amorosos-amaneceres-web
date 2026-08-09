@@ -8,7 +8,7 @@ export const ANIMAL_SLUG = {
   3: "lion",
   4: "turtle",
   5: "rabbit",
-  6: "butterfly",
+  6: "caterpillar",
   7: "bee",
   8: "sheep",
 };
