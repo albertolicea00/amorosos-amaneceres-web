@@ -6,6 +6,9 @@
 Thumbs.db
 
 # Editor junk
+.claude/
+.agents/
+.continue/
 .idea/
 *.swp
 
