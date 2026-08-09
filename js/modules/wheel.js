@@ -76,11 +76,20 @@ export function initWheel(data) {
     spinning = true;
     const targetIndex = Math.floor(Math.random() * stories.length);
     const targetSlice = targetIndex * slice + slice / 2;
-    const extraTurns = 6 * Math.PI * 2;
-    const finalRotation = extraTurns + (Math.PI * 2 - targetSlice) - Math.PI / 2;
+    const TWO_PI = Math.PI * 2;
+
+    // The pointer sits at canvas-fixed angle -PI/2 (12 o'clock). For the
+    // target slice's center to land there, the wheel's rotation must
+    // satisfy: targetSlice + rotation ≡ -PI/2 (mod 2π).
+    const desiredFinal = -Math.PI / 2 - targetSlice;
+    const currentMod = rotation % TWO_PI;
+    let delta = (desiredFinal - currentMod) % TWO_PI;
+    if (delta <= 0) delta += TWO_PI; // always spin forward, never backward/zero
+    const extraTurns = 6 * TWO_PI;
+    const finalRotation = extraTurns + delta;
 
     const duration = 4200;
-    const startRotation = rotation % (Math.PI * 2);
+    const startRotation = rotation;
     const start = performance.now();
 
     function animate(now) {
