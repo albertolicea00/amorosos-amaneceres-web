@@ -323,6 +323,42 @@
       "emoji": "🐤",
       "name_es": "Canario",
       "name_en": "Canary"
+    },
+    {
+      "slug": "penguin",
+      "emoji": "🐧",
+      "name_es": "Pingüino",
+      "name_en": "Penguin"
+    },
+    {
+      "slug": "dragon",
+      "emoji": "🐉",
+      "name_es": "Dragón",
+      "name_en": "Dragon"
+    },
+    {
+      "slug": "unicorn",
+      "emoji": "🦄",
+      "name_es": "Unicornio",
+      "name_en": "Unicorn"
+    },
+    {
+      "slug": "crab",
+      "emoji": "🦀",
+      "name_es": "Cangrejo",
+      "name_en": "Crab"
+    },
+    {
+      "slug": "fairy",
+      "emoji": "🧚",
+      "name_es": "Hada",
+      "name_en": "Fairy"
+    },
+    {
+      "slug": "snail",
+      "emoji": "🐌",
+      "name_es": "Caracol",
+      "name_en": "Snail"
     }
   ]
 }
